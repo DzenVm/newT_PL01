@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f0d26;
+  --foreground: #f2f1fa;
+  --surface: #181433;
+  --surface-2: #211a45;
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --accent-cyan: #56e2d6;
+  --accent-amber: #f0ad4e;
+  --accent-violet: #966ef0;
+  --accent-pink: #e66496;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-violet: var(--accent-violet);
+  --color-accent-pink: var(--accent-pink);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 1rem;
+}
+
+.logo-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.6rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+}
