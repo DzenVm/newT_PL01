@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://twindorgames.site";
 
 // Wymuszamy renderowanie po stronie serwera przy każdym żądaniu (SSR),
 // zamiast statycznego prerenderowania w czasie budowania.

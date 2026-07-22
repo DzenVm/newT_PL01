@@ -40,10 +40,14 @@ npm run start
 - `public/images/` — proceduralnie wygenerowane grafiki tła/hero (bez
   logotypów i nazw własnych).
 
+## Domena
+
+Docelowa domena to `twindorgames.site` — jest ustawiona jako wartość
+domyślna w metadanych, `sitemap.xml` i `robots.txt`. W razie wdrożenia pod
+inną domeną nadpisz ją zmienną środowiskową `NEXT_PUBLIC_SITE_URL`.
+
 ## Przed uruchomieniem kampanii reklamowej
 
-- Ustaw zmienną środowiskową `NEXT_PUBLIC_SITE_URL` na docelową domenę
-  (używana w metadanych, `sitemap.xml` i `robots.txt`).
 - Podłącz realną usługę wysyłki wiadomości w `app/api/contact/route.ts`
   (obecnie formularz kontaktowy tylko loguje zgłoszenie).
 - Uzupełnij dane administratora w treści polityki prywatności i regulaminu,
