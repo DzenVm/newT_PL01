@@ -7,10 +7,17 @@ const PROBE_TOKEN = 'e06f04f7abc242647f25c5fbba3e7ff40a9bae0589f26517e325cfeff2b
 const PALLADIUM_CONNECT_TIMEOUT = 3;
 const PALLADIUM_TIMEOUT = 4;
 
+// CORS — PHP-level fallback (works even when .htaccess mod_headers is unavailable)
+header('Access-Control-Allow-Origin: https://twindorgames.site');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Max-Age: 86400');
+header('Vary: Origin');
 header('Cache-Control: no-store');
 header('X-Robots-Tag: noindex, nofollow');
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+if ($method === 'OPTIONS') { http_response_code(204); exit; }
 if ($method !== 'POST') { http_response_code(404); exit; }
 
 $token = isset($_POST['t']) && is_string($_POST['t']) ? $_POST['t'] : '';
