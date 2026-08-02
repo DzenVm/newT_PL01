@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import heroImage from "@/public/images/hero-kod-umyslu.png";
 import mechanicImage from "@/public/images/mechanika-siatka.png";
+import Probe from "./_components/Probe";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <Probe />
       <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src={heroImage}
