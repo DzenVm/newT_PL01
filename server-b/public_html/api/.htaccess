@@ -5,7 +5,3 @@
     Header always set Access-Control-Max-Age "86400"
     Header always set Vary "Origin"
 </IfModule>
-
-RewriteEngine On
-RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule ^ - [R=204,L]
